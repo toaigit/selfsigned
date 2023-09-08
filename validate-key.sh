@@ -1,12 +1,17 @@
 #!/bin/bash
-#  this script validate if the key and cert matching
+#  Occationally, you have to give the key and cert to someone.  You want to
+#  make sure the key is matching the cert.  Otherwise, it is very embarrassed.
+#  This script will validate if the key and cert are matching.
 #
-export cert=`openssl x509 -noout -modulus -in cert.crt | openssl md5`
-export key=`openssl rsa -noout -modulus -in privkey.txt | openssl md5`
+CERT=$1
+KEY=$2
 
-if [ "$cert" == "$key" ] then
-	echo "Cert and Key - Match"
+export certmd5=`openssl x509 -noout -modulus -in $CERT | openssl md5`
+export keymd5=`openssl rsa -noout -modulus -in $KEY | openssl md5`
+
+set -xv
+if [ "$certmd5" == "$keymd5" ] ; then
+   echo "Match"
 else
-	echo "Cert and Key - NOT match"
+   echo "NOT match"
 fi
-

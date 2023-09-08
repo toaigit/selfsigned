@@ -1,0 +1,24 @@
+[ req ]
+prompt                 = no
+days                   = 730
+distinguished_name     = req_distname
+req_extensions         = v3_req
+
+[ req_distname ]
+countryName            = US
+stateOrProvinceName    = California
+localityName           = Stanford
+organizationName       = UIT
+organizationalUnitName = Enterprise Technology
+commonName             = dssplunkdev.stanford.edu
+emailAddress           = yourteam@lists.stanford.edu
+
+[ v3_req ]
+basicConstraints       = CA:false
+extendedKeyUsage       = serverAuth
+subjectAltName         = @sans	
+
+[ sans ]
+DNS.1 = ciaspshdev01.stanford.edu
+DNS.2 = ciaspshdev02.stanford.edu
+DNS.3 = dssplunkdev

@@ -1,0 +1,18 @@
+#!/bin/bash
+#  this script create your own RootCA (self-signed).  This will be used
+#  to a self-signed certificate.
+#
+
+PASSPHRASE=your-screte-passpharse
+DAYS=7300
+CERT=rootCACert.pem
+KEY=rootCAkey.pem
+
+openssl genrsa -des -out $KEY -passout pass:$PASSPHRASE 2048
+openssl req -x509 -sha256 -new -nodes -key $KEY \
+        -days $DAYS -passin pass:$PASSPHRASE \
+         -subj "/C=US/ST=CA/O=Stanford University/OU=Enterprise Technology/CN=stanford.edu" \
+        -out $CERT
+
+echo "Validating the Cert....."
+openssl x509 -in $CERT -text -noout | egrep 'Validity|Not Before|Not After|Subject:'

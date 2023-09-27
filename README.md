@@ -3,8 +3,7 @@
 ## Table of Contents
 
 1. [Introduction](#introduction)
-2. [Installation](#installation)
-3. [Startup and Shutdown](#startupShutdown)
+2. [How To](#HowTo)
 
 ## Introduction
 
@@ -12,7 +11,7 @@ During the development, you may need to run a webserver in SSL/https mode.   Thi
 
 This repo will guide you through the process to create your own rootCA and create your own SSL cert signed by you.
 
-## Installation
+## HowTwo
 
 To start using this repo, follow the following steps:
 

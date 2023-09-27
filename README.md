@@ -11,7 +11,7 @@ During the development, you may need to run a webserver in SSL/https mode.   Thi
 
 This repo will guide you through the process to create your own rootCA and create your own SSL cert signed by you.
 
-## HowTwo
+## HowTo
 
 To start using this repo, follow the following steps:
 

@@ -8,7 +8,8 @@
 
 ## Introduction
 
-During the development, you may need to run a webserver in SSL/https mode.   This will require the certificate.  You can utilize to the Let's encrypt free SSL cert valid for 3 months.  However, there is an easy way to create a self-signed certificate using your own RootCA.
+During the development, you may need to run a webserver in SSL/https mode.   This will require a certificate.  You can obtain an SSL certificate signed by Let's encrypt valid for 3 months and it is free.  However, there is an easy way to create a self-signed certificate using your own RootCA.
+
 This repo will guide you through the process to create your own rootCA and create your own SSL cert signed by you.
 
 ## Installation

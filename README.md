@@ -59,11 +59,11 @@ To start using this repo, follow the following steps:
 5. Create a self-signed cert
 -  Creating a cert with single sub-domain name (i.e., stories.resourceonline.org)
    ```bash
-   ./cert-gen.sh
+   ./gen-cert.sh
    ```
 6. Creating a self-signed cert with a multi sub-domains (SAN)
    ```bash
-   ./gen-scancert.sh
+   ./gen-sancert.sh
    ```
 
 ## Validate Cert and Key
